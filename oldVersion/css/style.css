@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'din-medium';
+    /*
+    src: url('../fonts/DIN Medium.eot');
+    src: url('../fonts/DIN Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DIN Medium.woff2') format('woff2'),
+    url('../fonts/DIN Medium.woff') format('woff'),
+    */
+    url('../fonts/DIN Medium.ttf') format('truetype'),
+    /*url('../fonts/DIN Medium.svg#ds-digitalbold') format('svg');*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    color: #444;
+    position: relative;
+    font-family: "din-medium", sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.sous-page {
+    background:
+        /* top, transparent, faked with gradient */
+        linear-gradient(
+            rgba(104, 189, 230, 0.1),
+            rgba(96, 62, 146, 0.1)
+        );
+    padding: 20px 20px;
+    margin: 20px;
+}
+.sous-page h1 {
+    color: rgba(96, 62, 146, 0.75);
+}
+.sous-page h1 small {
+    color: rgba(104, 189, 230, 0.75);
+}
+
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: left;
+    color: white;
+    background-color: none;
+    background:
+        /* top, transparent, faked with gradient */
+        linear-gradient(
+            rgba(104, 189, 230, 0.2),
+            rgba(96, 62, 146, 0.2)
+        ),
+
+
+        /* top, transparent, faked with gradient
+        linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),
+        */
+
+        /* bottom, image */
+        url(../img/bg.jpg) no-repeat 82% center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+#intro-content {
+    background: linear-gradient(
+        rgba(104, 189, 230, 0.5),
+        rgba(96, 62, 146, 0.5)
+    );
+    padding: 2em;
+}
+#intro-content h1 {
+    padding-top: 0;
+}
+
+.intro .intro-body .brand-heading {
+    font-size: 5em;
+}
+.intro .intro-body .brand-heading small {
+    font-size: 0.5em;
+    color: #fafafa;
+}
+
+.intro .intro-body .intro-text {
+    font-size: 1.2em;
+}
+.intro img {
+    filter:alpha(opacity=75); opacity:0.75;
+}
+
+@media(min-width:10px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
+
+    .intro .intro-body .brand-heading {
+        font-size: 5em;
+    }
+
+    .intro .intro-body .intro-text {
+        font-size: 1.2em;
+    }
+}
+
+.nav>li>a {
+    color: white;
+    padding: 12px;
+}
+.nav>li>a:hover, .nav>li>a:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.navbar-default {
+    background-color: rgba(96, 62, 146, 1);
+    border-color: transparent;
+    color: white;
+}
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white;
+    background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:active
+.navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+
+
+.img-about-us {
+    height: 200px
+}

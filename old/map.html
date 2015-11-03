@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+    html { height: 100% }
+    body { height: 100%; margin: 0px; padding: 0px }
+    #map_canvas { height: 100% ; width:100%;}
+  </style>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+  <script type="text/javascript">
+ 
+    var previousPosition = null;
+   
+   
+    function initialize() {
+      map = new google.maps.Map(document.getElementById("map_canvas"), {
+            zoom: 19,
+            center: new google.maps.LatLng(48.858565, 2.347198),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          });   
+    }
+       
+    if (navigator.geolocation)
+      var watchId = navigator.geolocation.watchPosition(successCallback, null, {enableHighAccuracy:true});
+    else
+      alert("Votre navigateur ne prend pas en compte la géolocalisation HTML5");
+       
+    function successCallback(position){
+      map.panTo(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 
+        map: map
+      });  
+      if (previousPosition){
+        var newLineCoordinates = [
+           new google.maps.LatLng(previousPosition.coords.latitude, previousPosition.coords.longitude),
+           new google.maps.LatLng(position.coords.latitude, position.coords.longitude)];
+         
+        var newLine = new google.maps.Polyline({
+          path: newLineCoordinates,        
+          strokeColor: "#FF0000",
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+        newLine.setMap(map);
+      }
+      previousPosition = position;
+
+      //specific points
+
+var myLatlng1 = new google.maps.LatLng(50.700933353504,3.158091014083); var marker = new google.maps.Marker({position: myLatlng1, map: map,title: '1'});
+var myLatlng2 = new google.maps.LatLng(50.701025446035,3.158087363982); var marker = new google.maps.Marker({position: myLatlng2, map: map,title: '2'});
+var myLatlng3 = new google.maps.LatLng(50.698890350343,3.160522893223); var marker = new google.maps.Marker({position: myLatlng3, map: map,title: '3'});
+var myLatlng4 = new google.maps.LatLng(50.699407086852,3.156455735213); var marker = new google.maps.Marker({position: myLatlng4, map: map,title: '4'});
+var myLatlng5 = new google.maps.LatLng(50.700905557239,3.158003903709); var marker = new google.maps.Marker({position: myLatlng5, map: map,title: '5'});
+var myLatlng6 = new google.maps.LatLng(50.700964643779,3.157950467727); var marker = new google.maps.Marker({position: myLatlng6, map: map,title: '6'});
+var myLatlng7 = new google.maps.LatLng(50.659176696430,3.033010390926); var marker = new google.maps.Marker({position: myLatlng7, map: map,title: '7'});
+var myLatlng8 = new google.maps.LatLng(50.593458862527,3.266607438395); var marker = new google.maps.Marker({position: myLatlng8, map: map,title: '8'});
+var myLatlng9 = new google.maps.LatLng(50.635477203701,3.066401930153); var marker = new google.maps.Marker({position: myLatlng9, map: map,title: '9'});
+var myLatlng10 = new google.maps.LatLng(48.875386630804,2.324359054411); var marker = new google.maps.Marker({position: myLatlng10, map: map,title: '10'});
+var myLatlng11 = new google.maps.LatLng(50.640036274275,3.057462770913); var marker = new google.maps.Marker({position: myLatlng11, map: map,title: '11'});
+var myLatlng12 = new google.maps.LatLng(50.700937033732,3.158110204194); var marker = new google.maps.Marker({position: myLatlng12, map: map,title: '12'});
+var myLatlng13 = new google.maps.LatLng(51.043729886919,2.393923008711); var marker = new google.maps.Marker({position: myLatlng13, map: map,title: '13'});
+var myLatlng14 = new google.maps.LatLng(48.853806196292,2.365547440638); var marker = new google.maps.Marker({position: myLatlng14, map: map,title: '14'});
+var myLatlng15 = new google.maps.LatLng(50.604454918460,3.032417019152); var marker = new google.maps.Marker({position: myLatlng15, map: map,title: '15'});
+var myLatlng16 = new google.maps.LatLng(48.830749189645,2.238898984085); var marker = new google.maps.Marker({position: myLatlng16, map: map,title: '16'});
+var myLatlng17 = new google.maps.LatLng(50.656975514681,3.155257248018); var marker = new google.maps.Marker({position: myLatlng17, map: map,title: '17'});
+var myLatlng18 = new google.maps.LatLng(48.834104124092,2.259738162363); var marker = new google.maps.Marker({position: myLatlng18, map: map,title: '18'});
+var myLatlng19 = new google.maps.LatLng(50.700887973373,3.157909398738); var marker = new google.maps.Marker({position: myLatlng19, map: map,title: '19'});
+var myLatlng20 = new google.maps.LatLng(50.700953681910,3.157977407190); var marker = new google.maps.Marker({position: myLatlng20, map: map,title: '20'});
+var myLatlng21 = new google.maps.LatLng(50.179737917036,3.215711196874); var marker = new google.maps.Marker({position: myLatlng21, map: map,title: '21'});
+var myLatlng22 = new google.maps.LatLng(50.635692064396,3.062874240020); var marker = new google.maps.Marker({position: myLatlng22, map: map,title: '22'});
+var myLatlng23 = new google.maps.LatLng(50.624567545980,3.042764759134); var marker = new google.maps.Marker({position: myLatlng23, map: map,title: '23'});
+var myLatlng24 = new google.maps.LatLng(50.624549767132,3.084367021949); var marker = new google.maps.Marker({position: myLatlng24, map: map,title: '24'});
+var myLatlng25 = new google.maps.LatLng(50.636864170000,3.075684749998); var marker = new google.maps.Marker({position: myLatlng25, map: map,title: '25'});
+var myLatlng26 = new google.maps.LatLng(50.658252141486,3.148072594780); var marker = new google.maps.Marker({position: myLatlng26, map: map,title: '26'});
+var myLatlng27 = new google.maps.LatLng(50.640851830309,3.155703878184); var marker = new google.maps.Marker({position: myLatlng27, map: map,title: '27'});
+var myLatlng28 = new google.maps.LatLng(50.700902324217,3.158126100901); var marker = new google.maps.Marker({position: myLatlng28, map: map,title: '28'});
+var myLatlng29 = new google.maps.LatLng(50.717247518583,3.147804782304); var marker = new google.maps.Marker({position: myLatlng29, map: map,title: '29'});
+var myLatlng30 = new google.maps.LatLng(51.533575809563,-0.137425534202); var marker = new google.maps.Marker({position: myLatlng30, map: map,title: '30'});
+var myLatlng31 = new google.maps.LatLng(50.649348516746,3.096572086121); var marker = new google.maps.Marker({position: myLatlng31, map: map,title: '31'});
+var myLatlng32 = new google.maps.LatLng(48.272807356938,17.021976393255); var marker = new google.maps.Marker({position: myLatlng32, map: map,title: '32'});
+var myLatlng33 = new google.maps.LatLng(48.738288882743,19.148773191685); var marker = new google.maps.Marker({position: myLatlng33, map: map,title: '33'});
+var myLatlng34 = new google.maps.LatLng(50.633450714175,3.063278627182); var marker = new google.maps.Marker({position: myLatlng34, map: map,title: '34'});
+var myLatlng35 = new google.maps.LatLng(49.259673456509,4.035935079955); var marker = new google.maps.Marker({position: myLatlng35, map: map,title: '35'});
+var myLatlng36 = new google.maps.LatLng(48.856700000000,2.350800000000); var marker = new google.maps.Marker({position: myLatlng36, map: map,title: '36'});
+var myLatlng37 = new google.maps.LatLng(50.620228054368,3.076268931683); var marker = new google.maps.Marker({position: myLatlng37, map: map,title: '37'});
+var myLatlng38 = new google.maps.LatLng(50.717424019287,3.147711418572); var marker = new google.maps.Marker({position: myLatlng38, map: map,title: '38'});
+var myLatlng39 = new google.maps.LatLng(48.856700000000,2.350800000000); var marker = new google.maps.Marker({position: myLatlng39, map: map,title: '39'});
+var myLatlng40 = new google.maps.LatLng(50.633877066463,3.021521995088); var marker = new google.maps.Marker({position: myLatlng40, map: map,title: '40'});
+var myLatlng41 = new google.maps.LatLng(50.633904259479,3.058390601849); var marker = new google.maps.Marker({position: myLatlng41, map: map,title: '41'});
+var myLatlng42 = new google.maps.LatLng(50.633370744137,3.046892828076); var marker = new google.maps.Marker({position: myLatlng42, map: map,title: '42'});
+var myLatlng43 = new google.maps.LatLng(50.630486293993,3.046992352146); var marker = new google.maps.Marker({position: myLatlng43, map: map,title: '43'});
+var myLatlng44 = new google.maps.LatLng(50.635129575789,3.067374489606); var marker = new google.maps.Marker({position: myLatlng44, map: map,title: '44'});
+var myLatlng45 = new google.maps.LatLng(50.644028822946,3.054800548286); var marker = new google.maps.Marker({position: myLatlng45, map: map,title: '45'});
+var myLatlng46 = new google.maps.LatLng(48.839227353761,2.317410571858); var marker = new google.maps.Marker({position: myLatlng46, map: map,title: '46'});
+var myLatlng47 = new google.maps.LatLng(50.672891366894,3.166746157499); var marker = new google.maps.Marker({position: myLatlng47, map: map,title: '47'});
+var myLatlng48 = new google.maps.LatLng(50.630740327720,3.020595240274); var marker = new google.maps.Marker({position: myLatlng48, map: map,title: '48'});
+var myLatlng49 = new google.maps.LatLng(42.489934165208,-71.195565723015); var marker = new google.maps.Marker({position: myLatlng49, map: map,title: '49'});
+var myLatlng50 = new google.maps.LatLng(48.882422913492,2.269243767031); var marker = new google.maps.Marker({position: myLatlng50, map: map,title: '50'});
+var myLatlng51 = new google.maps.LatLng(48.856700000000,2.350800000000); var marker = new google.maps.Marker({position: myLatlng51, map: map,title: '51'});
+var myLatlng52 = new google.maps.LatLng(48.825365972190,2.272952461863); var marker = new google.maps.Marker({position: myLatlng52, map: map,title: '52'});
+var myLatlng53 = new google.maps.LatLng(44.861931104945,-0.598632259557); var marker = new google.maps.Marker({position: myLatlng53, map: map,title: '53'});
+var myLatlng54 = new google.maps.LatLng(50.719734274965,3.161862739399); var marker = new google.maps.Marker({position: myLatlng54, map: map,title: '54'});
+var myLatlng55 = new google.maps.LatLng(50.633402754994,3.067281941213); var marker = new google.maps.Marker({position: myLatlng55, map: map,title: '55'});
+var myLatlng56 = new google.maps.LatLng(50.673573790102,3.167392987010); var marker = new google.maps.Marker({position: myLatlng56, map: map,title: '56'});
+var myLatlng57 = new google.maps.LatLng(50.685455206502,3.162970101501); var marker = new google.maps.Marker({position: myLatlng57, map: map,title: '57'});
+var myLatlng58 = new google.maps.LatLng(50.693004308316,3.166826097298); var marker = new google.maps.Marker({position: myLatlng58, map: map,title: '58'});
+var myLatlng59 = new google.maps.LatLng(50.668903819318,3.210551714581); var marker = new google.maps.Marker({position: myLatlng59, map: map,title: '59'});
+var myLatlng60 = new google.maps.LatLng(50.723580312829,3.177362532587); var marker = new google.maps.Marker({position: myLatlng60, map: map,title: '60'});
+var myLatlng61 = new google.maps.LatLng(50.624067076287,3.041400267414); var marker = new google.maps.Marker({position: myLatlng61, map: map,title: '61'});
+var myLatlng62 = new google.maps.LatLng(50.635309456544,3.068208689886); var marker = new google.maps.Marker({position: myLatlng62, map: map,title: '62'});
+var myLatlng63 = new google.maps.LatLng(50.628617419908,3.061901098120); var marker = new google.maps.Marker({position: myLatlng63, map: map,title: '63'});
+var myLatlng64 = new google.maps.LatLng(50.624122922275,3.056709065506); var marker = new google.maps.Marker({position: myLatlng64, map: map,title: '64'});
+var myLatlng65 = new google.maps.LatLng(50.635277731698,3.068240308806); var marker = new google.maps.Marker({position: myLatlng65, map: map,title: '65'});
+var myLatlng66 = new google.maps.LatLng(50.657815235097,3.140465617199); var marker = new google.maps.Marker({position: myLatlng66, map: map,title: '66'});
+var myLatlng67 = new google.maps.LatLng(48.871647223874,2.380984221107); var marker = new google.maps.Marker({position: myLatlng67, map: map,title: '67'});
+var myLatlng68 = new google.maps.LatLng(48.856700000000,2.350800000000); var marker = new google.maps.Marker({position: myLatlng68, map: map,title: '68'});
+var myLatlng69 = new google.maps.LatLng(50.748302660000,3.097084940000); var marker = new google.maps.Marker({position: myLatlng69, map: map,title: '69'});
+var myLatlng70 = new google.maps.LatLng(50.635185902225,3.066191121767); var marker = new google.maps.Marker({position: myLatlng70, map: map,title: '70'});
+var myLatlng71 = new google.maps.LatLng(50.625192468197,3.102649001525); var marker = new google.maps.Marker({position: myLatlng71, map: map,title: '71'});
+var myLatlng72 = new google.maps.LatLng(50.634864013733,3.066495639828); var marker = new google.maps.Marker({position: myLatlng72, map: map,title: '72'});
+var myLatlng73 = new google.maps.LatLng(50.630587041425,3.059720043096); var marker = new google.maps.Marker({position: myLatlng73, map: map,title: '73'});
+var myLatlng74 = new google.maps.LatLng(50.636221979445,3.057856591750); var marker = new google.maps.Marker({position: myLatlng74, map: map,title: '74'});
+var myLatlng75 = new google.maps.LatLng(48.856700000000,2.350800000000); var marker = new google.maps.Marker({position: myLatlng75, map: map,title: '75'});
+var myLatlng76 = new google.maps.LatLng(-25.280488086888,99.999999999999); var marker = new google.maps.Marker({position: myLatlng76, map: map,title: '76'});
+var myLatlng77 = new google.maps.LatLng(47.983191955376,0.223553247948); var marker = new google.maps.Marker({position: myLatlng77, map: map,title: '77'});
+var myLatlng78 = new google.maps.LatLng(50.624711297506,3.068984261310); var marker = new google.maps.Marker({position: myLatlng78, map: map,title: '78'});
+var myLatlng79 = new google.maps.LatLng(50.633438192313,3.056381346736); var marker = new google.maps.Marker({position: myLatlng79, map: map,title: '79'});
+var myLatlng80 = new google.maps.LatLng(50.694926500000,3.143547630000); var marker = new google.maps.Marker({position: myLatlng80, map: map,title: '80'});
+var myLatlng81 = new google.maps.LatLng(50.674219766022,3.167788937447); var marker = new google.maps.Marker({position: myLatlng81, map: map,title: '81'});
+var myLatlng82 = new google.maps.LatLng(50.672730419856,3.173767642765); var marker = new google.maps.Marker({position: myLatlng82, map: map,title: '82'});
+var myLatlng83 = new google.maps.LatLng(51.527114129402,-0.097838515525); var marker = new google.maps.Marker({position: myLatlng83, map: map,title: '83'});
+var myLatlng84 = new google.maps.LatLng(50.673014267214,3.166628652835); var marker = new google.maps.Marker({position: myLatlng84, map: map,title: '84'});
+var myLatlng85 = new google.maps.LatLng(50.669513136912,3.167478384535); var marker = new google.maps.Marker({position: myLatlng85, map: map,title: '85'});
+var myLatlng86 = new google.maps.LatLng(50.643749901176,3.116268443735); var marker = new google.maps.Marker({position: myLatlng86, map: map,title: '86'});
+var myLatlng87 = new google.maps.LatLng(50.674056877578,3.167905986146); var marker = new google.maps.Marker({position: myLatlng87, map: map,title: '87'});
+var myLatlng88 = new google.maps.LatLng(50.637875477373,3.066000153339); var marker = new google.maps.Marker({position: myLatlng88, map: map,title: '88'});
+var myLatlng89 = new google.maps.LatLng(50.606647300216,3.137200709777); var marker = new google.maps.Marker({position: myLatlng89, map: map,title: '89'});
+var myLatlng90 = new google.maps.LatLng(50.673134030343,3.164669928859); var marker = new google.maps.Marker({position: myLatlng90, map: map,title: '90'});
+var myLatlng91 = new google.maps.LatLng(48.856700000000,2.350800000000); var marker = new google.maps.Marker({position: myLatlng91, map: map,title: '91'});
+var myLatlng92 = new google.maps.LatLng(45.587571174255,5.296399068668); var marker = new google.maps.Marker({position: myLatlng92, map: map,title: '92'});
+var myLatlng93 = new google.maps.LatLng(50.633450170000,3.063256390000); var marker = new google.maps.Marker({position: myLatlng93, map: map,title: '93'});
+var myLatlng94 = new google.maps.LatLng(48.856700000000,2.350800000000); var marker = new google.maps.Marker({position: myLatlng94, map: map,title: '94'});
+var myLatlng95 = new google.maps.LatLng(50.671379773086,3.160361118074); var marker = new google.maps.Marker({position: myLatlng95, map: map,title: '95'});
+var myLatlng96 = new google.maps.LatLng(49.038809290811,3.955576536083); var marker = new google.maps.Marker({position: myLatlng96, map: map,title: '96'});
+var myLatlng97 = new google.maps.LatLng(48.856700000000,2.350800000000); var marker = new google.maps.Marker({position: myLatlng97, map: map,title: '97'});
+var myLatlng98 = new google.maps.LatLng(47.246909688273,-1.505151575327); var marker = new google.maps.Marker({position: myLatlng98, map: map,title: '98'});
+var myLatlng99 = new google.maps.LatLng(50.674842147022,3.166293414193); var marker = new google.maps.Marker({position: myLatlng99, map: map,title: '99'});
+var myLatlng100 = new google.maps.LatLng(48.856700000000,2.350800000000); var marker = new google.maps.Marker({position: myLatlng100, map: map,title: '100'});
+var myLatlng101 = new google.maps.LatLng(50.671075436111,3.164267589276); var marker = new google.maps.Marker({position: myLatlng101, map: map,title: '101'});
+var myLatlng102 = new google.maps.LatLng(50.650651302492,3.073657694472); var marker = new google.maps.Marker({position: myLatlng102, map: map,title: '102'});
+var myLatlng103 = new google.maps.LatLng(48.840374639708,2.389938984669); var marker = new google.maps.Marker({position: myLatlng103, map: map,title: '103'});
+var myLatlng104 = new google.maps.LatLng(48.856700000000,2.350800000000); var marker = new google.maps.Marker({position: myLatlng104, map: map,title: '104'});
+var myLatlng105 = new google.maps.LatLng(50.700923147730,3.158198875447); var marker = new google.maps.Marker({position: myLatlng105, map: map,title: '105'});
+var myLatlng106 = new google.maps.LatLng(50.658996549586,3.094662940027); var marker = new google.maps.Marker({position: myLatlng106, map: map,title: '106'});
+var myLatlng107 = new google.maps.LatLng(50.657966975804,3.143345230783); var marker = new google.maps.Marker({position: myLatlng107, map: map,title: '107'});
+var myLatlng108 = new google.maps.LatLng(50.642480944220,3.132374053132); var marker = new google.maps.Marker({position: myLatlng108, map: map,title: '108'});
+var myLatlng109 = new google.maps.LatLng(50.642611552077,3.065977133813); var marker = new google.maps.Marker({position: myLatlng109, map: map,title: '109'});
+var myLatlng110 = new google.maps.LatLng(48.879372635413,2.240588957777); var marker = new google.maps.Marker({position: myLatlng110, map: map,title: '110'});
+var myLatlng111 = new google.maps.LatLng(50.654098458455,3.147476136852); var marker = new google.maps.Marker({position: myLatlng111, map: map,title: '111'});
+var myLatlng112 = new google.maps.LatLng(50.626052392662,3.058997295458); var marker = new google.maps.Marker({position: myLatlng112, map: map,title: '112'});
+var myLatlng113 = new google.maps.LatLng(50.702772117267,3.160231299701); var marker = new google.maps.Marker({position: myLatlng113, map: map,title: '113'});
+var myLatlng114 = new google.maps.LatLng(43.212540850859,-77.953392133228); var marker = new google.maps.Marker({position: myLatlng114, map: map,title: '114'});
+
+
+
+    };    
+  </script>
+</head>
+ 
+<body onload="initialize()">
+  <div id="map_canvas"></div>
+</body>
+ 
+</html>
